@@ -106,6 +106,8 @@ class DeobfuscateShikataGaNai:
 		for token in tokens:
 			if token[0][0].text == 'fnstenv':
 				return True
+			if token[0][0].text == 'nop':
+				continue
 			if counter > 15:
 				return False
 			counter += 1
